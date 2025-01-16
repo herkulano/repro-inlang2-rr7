@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+.turbo/
+.react-router/
+build/
+dist/
+paraglide/
+.cache/

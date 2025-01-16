@@ -1,0 +1,47 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		/** Base Options */
+		"lib": ["ESNext"],
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"target": "ESNext",
+		"allowJs": true,
+		"resolveJsonModule": true,
+		"moduleDetection": "force",
+		"isolatedModules": true,
+
+		/** Allow importing ts extensions for NodeNext */
+		"allowImportingTsExtensions": true,
+
+		/** Keep TSC performant in monorepos */
+		"incremental": true,
+		"disableSourceOfProjectReferenceRedirect": true,
+		"tsBuildInfoFile": "${configDir}/.cache/tsbuildinfo.json",
+
+		/** Strictness */
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"checkJs": true,
+		"verbatimModuleSyntax": true,
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
+		"noPropertyAccessFromIndexSignature": true,
+
+		/** Transpile using Bundler (not tsc) */
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"noEmit": true
+	},
+	"exclude": [
+		"**/node_modules/**",
+		"**/build/**",
+		"**/dist/**",
+		"**/.expo/**",
+		"**/.turbo/**",
+		"**/.cache/**",
+		"**/coverage/**",
+		"**/playwright-report/**",
+		"**/test-results/**"
+	]
+}

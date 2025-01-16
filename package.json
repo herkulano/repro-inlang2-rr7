@@ -1,0 +1,28 @@
+{
+	"name": "rr7-inlang-2",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"start": "turbo run start",
+		"paraglide": "turbo run paraglide",
+		"check": "biome check --write",
+		"typecheck": "turbo run typecheck",
+		"checks": "pnpm run check && pnpm typecheck",
+		"clean": "git clean -dfX --exclude='!.env*'"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@tailwindcss/vite": "4.0.0-beta.9",
+		"@types/node": "22.10.7",
+		"@types/react": "19.0.7",
+		"@types/react-dom": "19.0.3",
+		"tailwindcss": "4.0.0-beta.9",
+		"typescript": "5.7.3",
+		"turbo": "2.3.3",
+		"vite": "6.0.7",
+		"vite-tsconfig-paths": "5.1.4"
+	},
+	"packageManager": "pnpm@9.15.4"
+}

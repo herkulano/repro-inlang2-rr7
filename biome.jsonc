@@ -1,0 +1,119 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
+	"files": {
+		"ignore": [
+			"**/node_modules/**",
+			"**/build/**",
+			"**/dist/**",
+			"**/app.css",
+			"**/public/**",
+			"**/paraglide/**"
+		]
+	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true,
+		"defaultBranch": "dev"
+	},
+	"formatter": {
+		"enabled": true,
+		"formatWithErrors": true,
+		"lineWidth": 100
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"nursery": {
+				"recommended": true,
+				"noProcessEnv": "error",
+				"noExportedImports": "error",
+				"noTemplateCurlyInString": "error",
+				"useValidAutocomplete": "error",
+				"noDuplicateElseIf": "error",
+				"noCommonJs": "error",
+				"useSortedClasses": {
+					"level": "error",
+					"options": {
+						"attributes": [
+							".*Styles",
+							".*ClassName",
+							"btnClassName",
+							"inputClassName",
+							"contentClassName"
+						],
+						"functions": ["tv", "tw", "twMerge", "cl", "cn", "clx"]
+					}
+				}
+			},
+			"performance": {
+				"recommended": true,
+				"noReExportAll": "error",
+				"noBarrelFile": "error",
+				"useTopLevelRegex": "error"
+			},
+			"security": {
+				"recommended": true
+			},
+			"complexity": {
+				"recommended": true,
+				"useLiteralKeys": "off"
+			},
+			"suspicious": {
+				"recommended": true,
+				"noConsoleLog": "warn",
+				"useAwait": "error"
+			},
+			"correctness": {
+				"recommended": true,
+				"noUnusedImports": "error",
+				"noUnusedVariables": "error",
+				"useHookAtTopLevel": "error"
+			},
+			"a11y": {
+				"recommended": true,
+				"useSemanticElements": "error"
+			},
+			"style": {
+				"recommended": true,
+				"useNodejsImportProtocol": "error"
+			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"enabled": true
+		}
+	},
+	"json": {
+		"formatter": {
+			"enabled": true
+		},
+		"parser": {
+			"allowComments": true,
+			"allowTrailingCommas": true
+		}
+	},
+	"css": {
+		"formatter": {
+			"enabled": true
+		}
+	},
+	"overrides": [
+		{
+			"include": ["libs/email/**"],
+			"linter": {
+				"rules": {
+					"performance": {
+						"noReExportAll": "off",
+						"noBarrelFile": "off"
+					}
+				}
+			}
+		}
+	]
+}
