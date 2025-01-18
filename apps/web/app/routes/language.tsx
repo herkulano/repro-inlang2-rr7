@@ -23,8 +23,26 @@ export default function Component({ params }: Route.ComponentProps) {
 			</nav>
 			<div className="space-y-4">
 				<h3>{m.welcome({ name: "John & Jane" })}</h3>
-				<p>{m.download_app({ userGender: "male", username: "John" })}</p>
-				<p>{m.download_app({ userGender: "female", username: "Jane" })}</p>
+			</div>
+			<div className="space-y-4">
+				<p>
+					{m.download_app({ userGender: "male", username: "John" })}{" "}
+					{m.download_app({ userGender: "female", username: "Jane" })}
+				</p>
+				<hr />
+				<p>
+					{m.download_app({ userGender: "male", username: "John" }, { locale: "en-US" })}{" "}
+					{m.download_app({ userGender: "female", username: "Jane" }, { locale: "en-US" })}
+				</p>
+				<p>
+					{m.download_app({ userGender: "male", username: "John" }, { locale: "pt-PT" })}{" "}
+					{m.download_app({ userGender: "female", username: "Jane" }, { locale: "pt-PT" })}
+				</p>
+				<p>
+					{m.download_app({ userGender: "male", username: "John" }, { locale: "el-GR" })}{" "}
+					{m.download_app({ userGender: "female", username: "Jane" }, { locale: "el-GR" })}
+				</p>
+				<hr />
 			</div>
 			<div className="space-y-2 text-sm">
 				<p>{m.lorem_ipsum_1()}</p>
