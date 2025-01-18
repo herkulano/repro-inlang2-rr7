@@ -9,9 +9,7 @@
 			"#/*": ["app/*"],
 
 			/* Libraries */
-			"@acme/i18n/*": ["../../libs/i18n/src/*"],
-			"@acme/i18n/runtime": ["../../libs/i18n/src/paraglide/runtime.js"],
-			"@acme/i18n/messages": ["../../libs/i18n/src/paraglide/messages.js"]
+			"@acme/i18n/*": ["../../libs/i18n/src/*"]
 		},
 		"types": ["@react-router/node", "vite/client"],
 		"rootDirs": [".", "./.react-router/types"],

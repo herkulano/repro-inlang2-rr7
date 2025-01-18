@@ -1,25 +1,9 @@
-import * as m from "@acme/i18n/messages";
-import { Welcome } from "../welcome/welcome";
-import type { Route } from "./+types/home";
-
-export function meta() {
-	return [
-		{ title: "New React Router App" },
-		{ name: "description", content: "Welcome to React Router!" },
-	];
-}
+import { redirect } from "react-router";
 
 export function loader() {
-	return {
-		message: m.welcome(),
-	};
+	return redirect("/en-US");
 }
 
-export default function Home({ loaderData }: Route.ComponentProps) {
-	return (
-		<>
-			<Welcome />
-			<h3>Se{loaderData.message}</h3>
-		</>
-	);
+export default function Component() {
+	return <p>This should never be seen</p>;
 }

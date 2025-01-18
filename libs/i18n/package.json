@@ -7,19 +7,10 @@
 		"./*": {
 			"types": "./dist/*.d.ts",
 			"default": ["./src/*.ts"]
-		},
-		"./runtime": {
-			"types": "./dist/paraglide/runtime.d.ts",
-			"default": ["./src/paraglide/runtime.js"]
-		},
-		"./messages": {
-			"types": "./dist/paraglide/messages.d.ts",
-			"default": ["./src/paraglide/messages.js"]
 		}
 	},
 	"scripts": {
 		"tsc": "tsc",
-		"postinstall": "pnpm paraglide",
 		"paraglide": "node --experimental-strip-types ./scripts/compile.ts",
 		"typecheck": "tsc --noEmit --emitDeclarationOnly false"
 	},
@@ -28,6 +19,6 @@
 		"@mjackson/headers": "0.9.0"
 	},
 	"devDependencies": {
-		"@inlang/paraglide-js": "2.0.0-beta.8"
+		"@inlang/paraglide-js": "2.0.0-beta.11"
 	}
 }

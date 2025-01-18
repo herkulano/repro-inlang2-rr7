@@ -1,3 +1,49 @@
 @import "tailwindcss" source(none);
 
-@source "../../apps/web/app/**/*";
+@source "../../../apps/web/app/**/*";
+
+@layer base {
+	body {
+		@apply text-black p-4;
+	}
+
+	a {
+		@apply underline text-blue-600;
+	}
+
+	a.active {
+		@apply font-bold text-blue-800;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		@apply font-semibold tracking-tight;
+	}
+	h5,
+	h6 {
+		@apply font-medium;
+	}
+	h1 {
+		@apply scroll-m-20 text-5xl;
+	}
+	h2 {
+		@apply scroll-m-20 text-3xl;
+	}
+	h3 {
+		@apply scroll-m-20 text-2xl;
+	}
+	h4 {
+		@apply scroll-m-20 text-xl;
+	}
+	h5 {
+		@apply text-base;
+	}
+	h6 {
+		@apply text-sm;
+	}
+	p {
+		@apply my-1 leading-normal;
+	}
+}
